@@ -16,7 +16,6 @@ class QuotesCubit extends Cubit<QuotesState> {
   List<QuoteModel> quotes = [];
   bool isLoadingMore = false;
 
-
   // -- -
   final QuotesRepoImpl quotesRepoImpl = QuotesRepoImpl(
     apiService: DioHelper(Dio()),
