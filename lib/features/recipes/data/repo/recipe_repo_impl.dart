@@ -1,6 +1,5 @@
-import 'package:pagination_in_details/features/recipes/data/model/recipe_model.dart';
-
 import '../../../../core/api/api_service.dart';
+import '../model/recipe_model.dart';
 
 class RecipeRepoImpl {
   final ApiService _apiService;

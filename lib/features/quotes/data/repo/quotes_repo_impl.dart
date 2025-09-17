@@ -1,5 +1,5 @@
-import 'package:pagination_in_details/core/api/api_service.dart';
-import 'package:pagination_in_details/features/quotes/data/models/quotes_model.dart';
+import '../../../../core/api/api_service.dart';
+import '../models/quotes_model.dart';
 
 class QuotesRepoImpl {
   final ApiService _apiService;

@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pagination_in_details/features/quotes/presentation/quotes_cubit/quotes_cubit.dart';
+import '../quotes_cubit/quotes_cubit.dart';
 
 import '../../data/models/quotes_model.dart';
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pagination_in_details/features/recipes/presentation/cubit/recipe_cubit.dart';
-import 'package:pagination_in_details/features/recipes/presentation/view/recipes_view.dart';
+
+import 'features/recipes/presentation/cubit/recipe_cubit.dart';
+import 'features/recipes/presentation/view/recipes_view.dart';
 
 void main() {
   runApp(const MainApp());

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pagination_in_details/features/recipes/presentation/cubit/recipe_cubit.dart';
+
+import '../cubit/recipe_cubit.dart';
 
 class RecipesView extends StatefulWidget {
   const RecipesView({super.key});

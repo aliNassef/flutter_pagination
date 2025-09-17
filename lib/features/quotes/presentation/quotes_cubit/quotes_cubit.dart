@@ -2,8 +2,8 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
-import 'package:pagination_in_details/features/quotes/data/models/quotes_model.dart';
-import 'package:pagination_in_details/features/quotes/data/repo/quotes_repo_impl.dart';
+import '../../data/models/quotes_model.dart';
+import '../../data/repo/quotes_repo_impl.dart';
 import '../../../../core/api/dio_helper.dart';
 
 part 'quotes_state.dart';
