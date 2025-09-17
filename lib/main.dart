@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'features/quotes/presentation/quotes_cubit/quotes_cubit.dart';
-import 'features/quotes/presentation/view/quotes_view.dart';
+import 'package:pagination_in_details/features/recipes/presentation/cubit/recipe_cubit.dart';
+import 'package:pagination_in_details/features/recipes/presentation/view/recipes_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -17,8 +16,8 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Quotes',
       home: BlocProvider(
-        create: (context) => QuotesCubit(),
-        child: const QuotesView(),
+        create: (context) => RecipeCubit(),
+        child: const RecipesView(),
       ),
     );
   }
