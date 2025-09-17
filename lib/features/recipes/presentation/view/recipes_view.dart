@@ -13,8 +13,6 @@ class _RecipesViewState extends State<RecipesView> {
   @override
   void initState() {
     super.initState();
-    // Assuming a BlocProvider<RecipeCubit> is available in the widget tree,
-    // we fetch the initial list of recipes.
     context.read<RecipeCubit>().getRecipes();
   }
 
