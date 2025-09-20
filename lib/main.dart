@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pagination_in_details/service_locator.dart';
-
-import 'features/recipes/presentation/cubit/recipe_cubit.dart';
-import 'features/recipes/presentation/view/recipes_view.dart';
+import 'package:pagination_in_details/app_config.dart';
+import 'package:pagination_in_details/core/di/service_locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  AppConfig.env = Env.production.name;
   configureDependencies();
   runApp(const MainApp());
 }
@@ -19,10 +17,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Quotes',
-      home: BlocProvider(
-        create: (context) => injector<RecipeCubit>(),
-        child: const RecipesView(),
-      ),
+      home: AppConfig.intialScreen,
     );
   }
 }

@@ -1,6 +1,8 @@
+import 'package:injectable/injectable.dart';
+
 import '../../../../core/api/api_service.dart';
 import '../models/quotes_model.dart';
-
+@lazySingleton
 class QuotesRepoImpl {
   final ApiService _apiService;
 
