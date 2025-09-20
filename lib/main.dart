@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pagination_in_details/service_locator.dart';
 
 import 'features/recipes/presentation/cubit/recipe_cubit.dart';
 import 'features/recipes/presentation/view/recipes_view.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
   runApp(const MainApp());
 }
 
@@ -17,7 +20,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Quotes',
       home: BlocProvider(
-        create: (context) => RecipeCubit(),
+        create: (context) => injector<RecipeCubit>(),
         child: const RecipesView(),
       ),
     );

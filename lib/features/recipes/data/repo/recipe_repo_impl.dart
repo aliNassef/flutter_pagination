@@ -1,6 +1,8 @@
+import 'package:injectable/injectable.dart';
+
 import '../../../../core/api/api_service.dart';
 import '../model/recipe_model.dart';
-
+@LazySingleton()
 class RecipeRepoImpl {
   final ApiService _apiService;
 
@@ -12,6 +14,10 @@ class RecipeRepoImpl {
               'https://dummyjson.com/recipes?limit=$limit&skip=$skip',
             )
             as Map<String, dynamic>;
+    if (response['skip'] >= response['total']) {
+      return [];
+    }
+
     final List data = response['recipes'];
     return data.map((e) => RecipeModel.fromJson(e)).toList();
   }
